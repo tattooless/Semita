@@ -1,0 +1,386 @@
+@import "tailwindcss";
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --background-light: #d3d3d3;
+  --background-alt: #f1f5f9;
+  --foreground: #1e293b;
+  --card: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(248, 250, 252, 0.8) 100%
+  );
+  --card-solid: rgba(255, 255, 255, 0.8);
+  --card-foreground: #1e293b;
+  --card-border: rgba(203, 213, 225, 0.5);
+  --popover: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 250, 252, 0.9) 100%
+  );
+  --popover-foreground: #1e293b;
+  --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-foreground: #ffffff;
+  --secondary: linear-gradient(
+    135deg,
+    rgba(241, 245, 249, 0.8) 0%,
+    rgba(248, 250, 252, 0.6) 100%
+  );
+  --secondary-foreground: #1e293b;
+  --muted: rgba(241, 245, 249, 0.6);
+  --muted-foreground: rgba(100, 116, 139, 0.8);
+  --accent: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --accent-foreground: #1e293b;
+  --destructive: linear-gradient(
+    135deg,
+    #ff6b6b 0%,
+    #ee5a52 100%
+  );
+  --destructive-foreground: #ffffff;
+  --border: rgba(203, 213, 225, 0.4);
+  --input: rgba(248, 250, 252, 0.8);
+  --input-background: rgba(248, 250, 252, 0.8);
+  --switch-background: rgba(203, 213, 225, 0.3);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(99, 102, 241, 0.3);
+  --chart-1: #667eea;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #ef4444;
+  --chart-5: #8b5cf6;
+  --radius: 0.625rem;
+  --sidebar: linear-gradient(
+    145deg,
+    rgba(248, 250, 252, 0.9) 0%,
+    rgba(241, 245, 249, 0.8) 100%
+  );
+  --sidebar-foreground: #1e293b;
+  --sidebar-primary: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  );
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(241, 245, 249, 0.6);
+  --sidebar-accent-foreground: #1e293b;
+  --sidebar-border: rgba(203, 213, 225, 0.4);
+  --sidebar-ring: rgba(99, 102, 241, 0.3);
+
+  /* Custom colorful theme additions */
+  --success: #10b981;
+  --success-foreground: #ffffff;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --info: #3b82f6;
+  --info-foreground: #ffffff;
+  --purple: #8b5cf6;
+  --purple-foreground: #ffffff;
+  --pink: #ec4899;
+  --pink-foreground: #ffffff;
+  --orange: #d99e00;
+  --orange-foreground: #ffffff;
+  --cyan: #06b6d4;
+  --cyan-foreground: #ffffff;
+}
+
+.dark {
+  --background: #0f172a;
+  --background-light: #1e293b;
+  --background-alt: #334155;
+  --foreground: #f8fafc;
+  --dark-mode-bg: url('figma:asset/f0a743817e040d3b16ed724f191d59dcce3fe6c0.png');
+  --card: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.8) 0%,
+    rgba(15, 23, 42, 0.9) 100%
+  );
+  --card-solid: rgba(30, 41, 59, 0.6);
+  --card-foreground: #f8fafc;
+  --card-border: rgba(248, 250, 252, 0.1);
+  --popover: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.95) 0%,
+    rgba(15, 23, 42, 0.95) 100%
+  );
+  --popover-foreground: #f8fafc;
+  --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-foreground: #ffffff;
+  --secondary: linear-gradient(
+    135deg,
+    rgba(51, 65, 85, 0.8) 0%,
+    rgba(30, 41, 59, 0.6) 100%
+  );
+  --secondary-foreground: #f8fafc;
+  --muted: rgba(30, 41, 59, 0.6);
+  --muted-foreground: rgba(148, 163, 184, 0.8);
+  --accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --accent-foreground: #0f172a;
+  --destructive: linear-gradient(
+    135deg,
+    #ff416c 0%,
+    #ff4b2b 100%
+  );
+  --destructive-foreground: #ffffff;
+  --border: rgba(51, 65, 85, 0.5);
+  --input: rgba(30, 41, 59, 0.8);
+  --ring: rgba(96, 165, 250, 0.5);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #667eea;
+  --chart-2: #34d399;
+  --chart-3: #fbbf24;
+  --chart-4: #f87171;
+  --chart-5: #a78bfa;
+  --sidebar: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.8) 0%,
+    rgba(15, 23, 42, 0.9) 100%
+  );
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  );
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(51, 65, 85, 0.6);
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: rgba(51, 65, 85, 0.5);
+  --sidebar-ring: rgba(96, 165, 250, 0.5);
+
+  /* Custom colorful theme additions for dark mode */
+  --success: #34d399;
+  --success-foreground: #1e293b;
+  --warning: #fbbf24;
+  --warning-foreground: #1e293b;
+  --info: #60a5fa;
+  --info-foreground: #1e293b;
+  --purple: #a78bfa;
+  --purple-foreground: #1e293b;
+  --pink: #f472b6;
+  --pink-foreground: #1e293b;
+  --orange: #fb923c;
+  --orange-foreground: #1e293b;
+  --cyan: #22d3ee;
+  --cyan-foreground: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-light: var(--background-light);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-solid: var(--card-solid);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-border: var(--card-border);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground
+  );
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(
+    --sidebar-accent-foreground
+  );
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom colorful theme colors */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-purple: var(--purple);
+  --color-purple-foreground: var(--purple-foreground);
+  --color-pink: var(--pink);
+  --color-pink-foreground: var(--pink-foreground);
+  --color-orange: var(--orange);
+  --color-orange-foreground: var(--orange-foreground);
+  --color-cyan: var(--cyan);
+  --color-cyan-foreground: var(--cyan-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  /* Gradient utility classes */
+  .gradient-card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .gradient-card-solid {
+    background: var(--card-solid);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .gradient-primary {
+    background: var(--primary);
+  }
+
+  .gradient-secondary {
+    background: var(--secondary);
+  }
+
+  .gradient-accent {
+    background: var(--accent);
+  }
+
+  .gradient-destructive {
+    background: var(--destructive);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: var(--card);
+    border: 1px solid var(--card-border);
+  }
+
+  /* Dark title class for section headings */
+  .text-dark-title {
+    color: #000000;
+  }
+  
+  .dark .text-dark-title {
+    color: #ffffff;
+  }
+
+  /* Custom responsive breakpoints */
+  @media (min-width: 375px) {
+    .xs\:block {
+      display: block;
+    }
+    .xs\:hidden {
+      display: none;
+    }
+  }
+
+  /* Mobile-first responsive text sizing */
+  @media (max-width: 640px) {
+    .mobile-text-sm {
+      font-size: 0.875rem;
+    }
+    .mobile-text-xs {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(
+    :not(:has([class*=" text-"]), :not(:has([class^="text-"])))
+  ) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Ensure proper mobile viewport handling */
+@viewport {
+  width: device-width;
+  initial-scale: 1;
+}
+
+/* iOS Safari specific fixes for mobile */
+@supports (-webkit-touch-callout: none) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+  }
+}
